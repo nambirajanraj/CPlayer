@@ -44,7 +44,7 @@ https://www.cricapi.com/how-to-use/player-finder.aspx
 - Using Services to populate these data in views
 - Stitching these views using Routes and Guards
 - Making the UI Responsive
-- E2E only for few views
+- E2E test cases and unit test cases
 - Writing CI configuration file
 - Dockerize the frontend
 
