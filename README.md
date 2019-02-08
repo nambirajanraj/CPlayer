@@ -64,5 +64,5 @@ https://www.cricapi.com/how-to-use/player-finder.aspx
 - Dockerize the application
 - Update the docker-compose
 
-### Demonstrate the entire application - (1 Hour)
+### Demonstrate the entire application - 
 
