@@ -56,16 +56,16 @@ public class PlayerServiceImplTest {
 		final boolean flag=playerServiceImpl.savePlayer(player);
 		assertTrue("Player creation failed",flag);
 		verify(playerRepository,times(1)).save(player);
-		verify(playerRepository,times(1)).findById(player.getId());
+		verify(playerRepository,times(1)).findByPidAndUserId(player.getPid(), player.getUserId());
 	}
 	
 	@Test(expected = PlayerAlreadyExistsException.class)
 	public void testSavePlayerFailure() throws PlayerAlreadyExistsException {
-		when(playerRepository.findById(player.getId())).thenReturn(optionalPlayer);
+		when(playerRepository.findByPidAndUserId(player.getPid(),player.getUserId())).thenReturn(optionalPlayer);
 		when(playerRepository.save(player)).thenReturn(player);	
 		final boolean flag=playerServiceImpl.savePlayer(player);
 		assertFalse("Saving player failed",flag);
-		verify(playerRepository,times(1)).findById(player.getId());
+		verify(playerRepository,times(1)).findByPidAndUserId(player.getPid(), player.getUserId());
 	}
 
 

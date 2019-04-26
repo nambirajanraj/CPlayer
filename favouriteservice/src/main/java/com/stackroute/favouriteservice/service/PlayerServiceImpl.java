@@ -51,14 +51,22 @@ public class PlayerServiceImpl implements PlayerService {
 	@Override
 	public boolean savePlayer(Player player) throws PlayerAlreadyExistsException {
 		// TODO Auto-generated method stub
-		final Optional<Player> playerobj=playerrepository.findById(player.getId());
+		/*List<Player> playerList = getMyPlayers(player.getUserId());
+		
+		for(Player p : playerList)
+		{
+			if(p.getPid()==player.getPid())
+			{
+				throw new PlayerAlreadyExistsException("Could not save player ,player already exists");
+			}
+		}*/
+		
+		Optional<Player> playerobj = playerrepository.findByPidAndUserId(player.getPid(),player.getUserId());
 		
 		if(playerobj.isPresent())
 		{
 			throw new PlayerAlreadyExistsException("Could not save player ,player already exists");
-			
 		}
-		
 		playerrepository.save(player);
 		
 		return true;

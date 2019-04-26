@@ -53,14 +53,14 @@ public class PlayerRepositoryTest {
 	}
 	
 	@Test
-	public void testGetMovie() throws Exception {
+	public void testGetPlayer() throws Exception {
 		Player mov = playerRepo.save(new Player(1,2,"abcd","user"));
 		final Player player= playerRepo.findById(mov.getId()).get();		
 		Assert.assertEquals(player.getName(),"abcd");
 	}
 	
 	@Test
-	public void testGetMyMovies() throws Exception {
+	public void testGetMyPlayers() throws Exception {
 		playerRepo.save(new Player(0,1,"abcd","user"));
 		playerRepo.save(new Player(2,2,"efgh","user"));
 		

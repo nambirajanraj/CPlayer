@@ -102,7 +102,7 @@ public class PlayerController {
 		ResponseEntity<?> responseEntity;
 		try {
 			playerservice.deletePlayerById(id);
-			responseEntity = new ResponseEntity<String>("Movie deleted successfully", HttpStatus.OK);
+			responseEntity = new ResponseEntity<String>("Player deleted successfully", HttpStatus.OK);
 		} 
 		catch (PlayerNotFoundException e) {
 			responseEntity = new ResponseEntity<String>("{ \"message\": \"" + e.getMessage() + "\"}", HttpStatus.NOT_FOUND);
