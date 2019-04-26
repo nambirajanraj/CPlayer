@@ -1,0 +1,30 @@
+.player-thumbnail{
+    width:270px;
+    margin:10px;
+}
+
+.player-header{
+    height:75px;
+}
+
+
+.player-image{
+    height:400px;
+}
+
+.player-overview {
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.player-overview::-webkit-scrollbar {
+    width: 2px;
+    backface-visibility: gray;
+}
+
+.player-actions{
+    text-align: right;
+
+}

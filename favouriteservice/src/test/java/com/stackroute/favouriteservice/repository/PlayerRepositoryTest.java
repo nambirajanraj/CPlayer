@@ -54,8 +54,8 @@ public class PlayerRepositoryTest {
 	
 	@Test
 	public void testGetPlayer() throws Exception {
-		Player mov = playerRepo.save(new Player(1,2,"abcd","user"));
-		final Player player= playerRepo.findById(mov.getId()).get();		
+		Player pl = playerRepo.save(new Player(1,2,"abcd","user"));
+		final Player player= playerRepo.findById(pl.getId()).get();		
 		Assert.assertEquals(player.getName(),"abcd");
 	}
 	
