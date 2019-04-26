@@ -27,13 +27,13 @@ export class PlayerService {
       return this.http.get(searchEndpoint).pipe(
         
         retry(3),
-        map(this.pickMovieResults),
+        map(this.pickPlayerResults),
         map(this.transformImagepath.bind(this))
       );
     }
   }
 
-  pickMovieResults(response)
+  pickPlayerResults(response)
   {
     return response['data'];
   }
@@ -84,5 +84,20 @@ export class PlayerService {
 
    }
 
+    getPlayerDetails(id:number)
+    {
+       const playerDetailsEndpoint = `http://cricapi.com/api/playerStats/?pid=${id}&apikey=VigtGZYbP6ZscrufCRST4cEec1T2`;
+
+       return this.http.get(playerDetailsEndpoint).pipe(
+        
+        retry(3),
+        //map(this.pickPlayerDetails)
+      );
+    }
+
+    pickPlayerDetails(response)
+    {
+        return response[''];
+    }
   
 }

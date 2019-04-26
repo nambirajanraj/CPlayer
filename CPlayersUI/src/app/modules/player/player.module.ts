@@ -8,9 +8,10 @@ import { PlayerService } from './player.service';
 import { ContainerComponent } from './components/container/container.component';
 import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
+import { PlayerComponent } from './components/player/player.component';
 
 @NgModule({
-  declarations: [SearchComponent, ContainerComponent, ThumbnailComponent, FavoriteComponent],
+  declarations: [SearchComponent, ContainerComponent, ThumbnailComponent, FavoriteComponent, PlayerComponent],
   imports: [
     CommonModule,
     HttpClientModule,

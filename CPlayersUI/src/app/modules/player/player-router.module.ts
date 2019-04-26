@@ -5,6 +5,7 @@ import { PlayerRouterRoutingModule } from './player-router-routing.module';
 import { AuthGuardService } from 'src/app/auth-guard.service';
 import { SearchComponent } from './components/search/search.component';
 import { FavoriteComponent } from './components/favorite/favorite.component';
+import { PlayerComponent } from './components/player/player.component';
 
 const playerRoutes: Routes=[
   {
@@ -25,6 +26,12 @@ const playerRoutes: Routes=[
          {
            path:'favouriteList',
            component:FavoriteComponent,
+           canActivate:[AuthGuardService]
+         },
+
+         {
+           path:'player/:player.pid',
+           component:PlayerComponent,
            canActivate:[AuthGuardService]
          }
       ]
