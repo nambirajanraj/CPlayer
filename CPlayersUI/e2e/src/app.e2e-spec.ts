@@ -29,12 +29,12 @@ describe('CPlayerUI App', () => {
   });
 
   it('should be able to register user', () => {
-    browser.driver.sleep(1000);
     browser.element(by.id('firstName')).sendKeys('Nambi');
     browser.element(by.id('lastName')).sendKeys('Rajan');
     browser.element(by.id('userId')).sendKeys('Nambi1234');
     browser.element(by.id('password')).sendKeys('pass1234');
     browser.element(by.css('.register-user')).click();
+  
     expect(browser.getCurrentUrl()).toContain('/login');
   });
 
