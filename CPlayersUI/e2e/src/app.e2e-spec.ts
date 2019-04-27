@@ -18,10 +18,11 @@ describe('CPlayerUI App', () => {
   });
 
 
-  it('should be redirected to /login route on opening the application', () => {
-    expect(browser.getCurrentUrl()).toContain('/login');
+  it('should be directed to home  on opening the application', () => {
+    expect(browser.getCurrentUrl()).toContain('');
   });
 
+   
   it('should be redirected to /register route', () => {
     browser.element(by.css('.register-button')).click();
     expect(browser.getCurrentUrl()).toContain('/register');

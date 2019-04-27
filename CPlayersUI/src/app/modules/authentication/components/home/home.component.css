@@ -1,4 +1,4 @@
-.player-thumbnail{
+.home-thumbnail{
     width:300px;
     margin:10px;
 }
@@ -15,17 +15,17 @@
     align-items: center;
 }
 
-.player-header{
+.home-header{
     height:75px;
 }
 
 
-.player-image{
+.home-image{
     height:200px;
     width: 300px;
 }
 
-.player-actions{
+.home-actions{
     text-align: right;
 
 }
