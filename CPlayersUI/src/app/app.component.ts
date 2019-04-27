@@ -10,12 +10,15 @@ import { AuthenticationService } from './modules/authentication/authentication.s
 })
 export class AppComponent {
   title = 'CPlayerUI';
+  ishome:boolean;
   constructor(private authService: AuthenticationService,
-    private router: Router) { }
+    private router: Router) {
+      this.ishome=true;
+     }
 
   logout() {
     this.authService.deleteToken();
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 
 }

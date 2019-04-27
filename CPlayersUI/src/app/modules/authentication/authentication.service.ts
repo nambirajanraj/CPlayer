@@ -48,7 +48,7 @@ export class AuthenticationService {
     date.setUTCSeconds(this.decoded.exp);
     return date;
   }
-
+   
   isTokenExpired(token?: string): boolean {
     if(!token) {
       token = this.getToken();

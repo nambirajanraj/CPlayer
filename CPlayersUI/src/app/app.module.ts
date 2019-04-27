@@ -9,12 +9,25 @@ import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { SharedModule } from './modules/shared/shared.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { AuthGuardService } from './auth-guard.service';
+import { LoginComponent } from './modules/authentication/components/login/login.component';
+import { RegisterComponent } from './modules/authentication/components/register/register.component';
+import { HomeComponent } from './modules/authentication/components/home/home.component';
 const appRoutes:Routes = [
 
+  
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
+  },
   {
     path:'',
-    redirectTo: '/login',
-    pathMatch:'full'
+    component:HomeComponent
+    
+   
   }
 ]
 

@@ -1,0 +1,31 @@
+.player-thumbnail{
+    width:300px;
+    margin:10px;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-top: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.player-header{
+    height:75px;
+}
+
+
+.player-image{
+    height:200px;
+    width: 300px;
+}
+
+.player-actions{
+    text-align: right;
+
+}

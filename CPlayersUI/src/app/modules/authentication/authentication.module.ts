@@ -6,11 +6,12 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationRouterModule } from '../authentication/authentication-router.module';
 import { AuthenticationService } from '../authentication/authentication.service';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     LoginComponent, 
-    RegisterComponent
+    RegisterComponent, HomeComponent
   ],
   imports: [
     CommonModule,
