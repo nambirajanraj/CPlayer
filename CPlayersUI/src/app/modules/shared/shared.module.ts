@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
   declarations: [],
   imports: [
     CommonModule,
+    FlexLayoutModule,
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -27,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
   ],
   exports: [
     CommonModule,
+    FlexLayoutModule,
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,

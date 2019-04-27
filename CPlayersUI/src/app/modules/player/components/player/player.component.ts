@@ -13,7 +13,7 @@ import { PlayerDetails } from '../../playerdetails';
 export class PlayerComponent implements OnInit {
 
    id:number;
-   playerDetail: PlayerDetails;
+   playerDetail: any;
   constructor(private route:ActivatedRoute, private router:Router,private playerService:PlayerService) { }
 
    
@@ -34,10 +34,15 @@ export class PlayerComponent implements OnInit {
         playerDetail =>{
           
            console.log(playerDetail);
+           this.playerDetail = playerDetail;
+          
+          
         }
       )   
-    
+   
   }
+
+  
  
   
  

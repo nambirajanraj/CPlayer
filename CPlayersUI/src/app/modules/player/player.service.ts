@@ -14,6 +14,7 @@ export class PlayerService {
   cricapiEndpoint: string;
   imagePrefix: string;
   springEndpoint: string;
+  playerDetail:any;
   constructor(private http:HttpClient , private authService:AuthenticationService) {
     this.cricapiEndpoint= "http://cricapi.com/api/playerFinder";
     this.apikey ="VigtGZYbP6ZscrufCRST4cEec1T2";
@@ -88,11 +89,9 @@ export class PlayerService {
     {
        const playerDetailsEndpoint = `http://cricapi.com/api/playerStats/?pid=${id}&apikey=VigtGZYbP6ZscrufCRST4cEec1T2`;
 
-       return this.http.get(playerDetailsEndpoint).pipe(
-        
-        retry(3),
-        //map(this.pickPlayerDetails)
-      );
+       this.playerDetail= this.http.get(playerDetailsEndpoint);
+        return this.playerDetail;
+       
     }
 
     pickPlayerDetails(response)

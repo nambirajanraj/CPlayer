@@ -1,8 +1,6 @@
-export interface PlayerDetails{
+export class PlayerDetails{
     
-    pid: number;
-    country: string;
-    profile: string;
+    pid:number;
    
    
    

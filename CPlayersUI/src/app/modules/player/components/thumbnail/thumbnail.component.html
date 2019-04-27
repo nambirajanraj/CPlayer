@@ -1,11 +1,11 @@
 <mat-card class="player-thumbnail">
  
   <mat-card-header class="player-header">
-      <mat-card-title class="playerTitle">{{player?.fullName}}</mat-card-title>
-      <mat-card-subtitle>{{player?.pid}}</mat-card-subtitle>
+      <mat-card-title class="playerTitle" >{{player?.name}}</mat-card-title>
+      <mat-card-subtitle>{{player?.fullName}}</mat-card-subtitle>
   </mat-card-header>
   
-  <img class="movie-image" mat-card-image [src]="player?.image_path" [alt]="player.name">
+  <img class="player-image" mat-card-image [src]="player?.image_path" >
   <mat-card-actions class="player-actions"> 
   
   <button class="addButton" *ngIf="!useFavouriteListApi" mat-raised-button color="primary" (click)="addToFavouriteList()" >Add to favoritelist</button>

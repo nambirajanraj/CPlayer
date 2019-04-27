@@ -1,5 +1,5 @@
 .player-thumbnail{
-    width:270px;
+    width:300px;
     margin:10px;
 }
 
@@ -9,19 +9,8 @@
 
 
 .player-image{
-    height:400px;
-}
-
-.player-overview {
-    height: 50px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-
-.player-overview::-webkit-scrollbar {
-    width: 2px;
-    backface-visibility: gray;
+    height:200px;
+    width: 300px;
 }
 
 .player-actions{

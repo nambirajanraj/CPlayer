@@ -1,3 +1,69 @@
-<p>
-  player works!
-</p>
+
+<!--<div class="row">
+    <div style="background: rgb(199, 197, 197); border-radius: 10px; min-height: 450px; margin-bottom: 50px;"
+        class="col-md-offset-3 col-md-6 col-sm-12 col-xs-12 playercard" itemscope itemtype="http://schema.org/Person">
+     
+            
+                <h2 itemprop="name">
+                  {{playerDetail?.fullName}}</h2>
+          
+        <table class="table table-striped">
+            
+            <tr>
+                <th>Plays for</th>
+                <td colspan="2" itemprop="nationality">{{playerDetail?.country}}</td>
+            </tr>
+            <tr>
+                <th>Born</th>
+                <td colspan="2">{{playerDetail?.born}}</td>
+            </tr>
+            
+            <tr>
+                <th>Batting Style</th>
+                <td colspan="2">{{playerDetail?.battingStyle}}</td>
+            </tr>
+            
+            <tr>
+                <th>Bowling Style</th>
+                <td colspan="2">{{playerDetail?.bowlingStyle}}</td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    {{playerDetail?.profile}}
+                </td>
+            </tr>
+            
+        </table>-->
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>   {{playerDetail?.fullName}}</mat-card-title>
+              <mat-card-subtitle>{{playerDetail?.country}}</mat-card-subtitle>
+            </mat-card-header>
+          
+            <mat-card-content>
+              <p ><b>Born :</b> {{playerDetail?.born}}</p>
+              <p><b>Batting Style :</b>{{playerDetail?.battingStyle}}</p>
+              <p><b>Bowling Style :</b>{{playerDetail?.bowlingStyle}}</p>
+              <h3>OdI Carrier :</h3>
+              <p>&nbsp; <b>Batting :</b> Matches - {{playerDetail?.data?.batting?.ODIs?.Mat}} , Runs - {{playerDetail?.data?.batting?.ODIs?.Runs}} , Average -{{playerDetail?.data?.batting?.ODIs?.Ave}} </p>
+              <p>&nbsp; <b>Bowling :</b> Matches - {{playerDetail?.data?.bowling?.ODIs?.Mat}} , Runs - {{playerDetail?.data?.bowling?.ODIs?.Runs}} , Balls -{{playerDetail?.data?.bowling?.ODIs?.Balls}} , Economy - {{playerDetail?.data?.bowling?.ODIs?.Econ}} , Wickets -{{playerDetail?.data?.bowling?.ODIs?.Wkts}}</p>
+                
+              <h3>T20 Carrier :</h3>
+              <p>&nbsp; <b>Batting :</b> Matches - {{playerDetail?.data?.batting?.T20Is?.Mat}} , Runs - {{playerDetail?.data?.batting?.T20Is?.Runs}} , Average -{{playerDetail?.data?.batting?.T20Is?.Ave}} </p>
+              <p>&nbsp; <b>Bowling :</b> Matches - {{playerDetail?.data?.bowling?.T20Is?.Mat}} , Runs - {{playerDetail?.data?.bowling?.T20Is?.Runs}} , Balls -{{playerDetail?.data?.bowling?.T20Is?.Balls}} , Economy - {{playerDetail?.data?.bowling?.T20Is?.Econ}} , Wickets -{{playerDetail?.data?.bowling?.T20Is?.Wkts}}</p>
+
+              
+              <h3>Test Carrier :</h3>
+              <p>&nbsp; <b>Batting :</b> Matches - {{playerDetail?.data?.batting?.tests?.Mat}} , Runs - {{playerDetail?.data?.batting?.tests?.Runs}} , Average -{{playerDetail?.data?.batting?.tests?.Ave}} </p>
+              <p>&nbsp; <b>Bowling :</b> Matches - {{playerDetail?.data?.bowling?.tests?.Mat}} , Runs - {{playerDetail?.data?.bowling?.tests?.Runs}} , Balls -{{playerDetail?.data?.bowling?.tests?.Balls}} , Economy - {{playerDetail?.data?.bowling?.tests?.Econ}} , Wickets -{{playerDetail?.data?.bowling?.tests?.Wkts}}</p>
+
+              
+              <p>
+                <b>About :</b>
+                  {{playerDetail?.profile}}
+              </p>
+            </mat-card-content>
+          
+          </mat-card>
