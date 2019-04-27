@@ -1,0 +1,40 @@
+services: 
+  angular: 
+    build: CPlayersUI/
+    container_name: angular-docker
+    image: player-angular-image
+    network_mode: host
+    ports: 
+      - "4200:4200"
+  mysql: 
+    environment: 
+      MYSQL_DATABASE: playerdb
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+    image: "mysql:5.5"
+    network_mode: host
+    ports: 
+      - "3306:3306"
+    restart: always
+  spring: 
+    build: favouriteservice/
+    depends_on: 
+      - mysql
+    expose: 
+      - "8888"
+    image: player-spring-image
+    network_mode: host
+    ports: 
+      - "8888:8888"
+  user-app: 
+    build: userservice/
+    depends_on: 
+      - mysql
+    expose: 
+      - 8880
+    image: player-user-app
+    network_mode: host
+    ports: 
+      - "8880:8880"
+version: "3"

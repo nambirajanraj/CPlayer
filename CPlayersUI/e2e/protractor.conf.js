@@ -9,8 +9,8 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
-      
+    'browserName': 'chrome',
+      'args' :['--disable-web-security','--user-data-dir=~/.e2e-chrome-profile']
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
