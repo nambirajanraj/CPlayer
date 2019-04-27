@@ -43,28 +43,7 @@ describe('CPlayerUI App', () => {
     browser.element(by.css('.login-user')).click();
     expect(browser.getCurrentUrl()).toContain('/players/search');
   });
-/*
-  it('should be able to search movies', () => {
-    browser.element(by.css('.search-button')).click();
-    expect(browser.getCurrentUrl()).toContain('/movies/search');
-    browser.element(by.id('search-button-input')).sendKeys('Super');
-    browser.element(by.id('search-button-input')).sendKeys(protractor.Key.ENTER);
-    const searchItems = element.all(by.css('.movieTitle'));
-    expect(searchItems.count()).toBe(20);
-    for(let i = 0; i < 1; i += 1) {
-      expect(searchItems.get(i).getText()).toContain('Super');
-    }
-  });
 
-  it('should be able to add movie to watchlist', async() => {
-    browser.driver.manage().window().maximize();
-    browser.driver.sleep(1000);
-    const searchItems = element.all(by.css('.movie-thumbnail'));
-    expect(searchItems.count()).toBe(20);
-    searchItems.get(0).click();
-    browser.element(by.css('.addButton')).click();
-    browser.driver.sleep(10000);
-  });
-  */
+ 
 
 });
