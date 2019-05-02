@@ -1,0 +1,19 @@
+.player-thumbnail{
+    width:300px;
+    margin:10px;
+}
+
+.player-header{
+    height:75px;
+}
+
+
+.player-image{
+    height:200px;
+    width: 300px;
+}
+
+.player-actions{
+    text-align: right;
+
+}

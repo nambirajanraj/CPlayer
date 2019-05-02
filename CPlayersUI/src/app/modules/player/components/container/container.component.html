@@ -1,0 +1,6 @@
+<div class="player-container">
+    <div fxLayout="row wrap">
+  <player-thumbnail fxFlex.lt-md="50" fxFlex.lt-sm="100" *ngFor="let player of players" [player]="player" [useFavouriteListApi]="useFavouriteListApi"
+  (addPlayer)="addToFavouriteList($event)" (deletePlayer)="deleteFromFavouriteList($event)"></player-thumbnail>
+  <div>
+</div>
